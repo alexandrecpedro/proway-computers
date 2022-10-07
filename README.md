@@ -68,7 +68,7 @@ The following tools were used in building the project:<br><br>
         </li>
         <li &nbsp;>Clone the repository
         <ul>
-            <li>git clone https://github.com/alexandrecpedro/eSports</li>
+            <li>git clone https://github.com/alexandrecpedro/proway-computers</li>
         </ul>
         </li>
         <li &nbsp;>Enter the project directory:

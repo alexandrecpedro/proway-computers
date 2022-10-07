@@ -1,0 +1,18 @@
+<h2 class="cart-title">Cart</h2>
+<div *ngIf="cartItems.length > 0; else noProduct">
+    <ul>
+        <li *ngFor="let cartItem of cartItems">
+            <img [src]="cartItem.image">
+            <p>{{ cartItem.description }}</p>
+            <p>Price: {{ cartItem.price | currency: "BRL" }}</p>
+            <label>
+                Quantity:
+                <input type="number" [(ngModel)]="cartItem.quantity" (change)="totalAmount()">
+            </label>
+            <button class="remove-button" (click)="removeFromCart(cartItem.id)"><i class="fa-sharp fa-solid fa-x"></i></button>
+        </li>
+    </ul>
+    <h2 class="cart-total">Total: {{ total | currency: "BRL" }}</h2>
+    <button class="buy-button" (click)="buy()">Buy</button>
+</div>
+<ng-template #noProduct>No product was added to the cart</ng-template>
